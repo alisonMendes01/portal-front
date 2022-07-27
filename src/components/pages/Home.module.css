@@ -1,0 +1,53 @@
+.home_banner{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4em;
+    background-image: url("../../img/banner.webp");
+    background-size: contain;
+}
+
+.home_banner h1 {
+    font-size: 2.5em;
+    margin-bottom: .5em;
+    color: white;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.home_banner p {
+    color: white;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.home_egressos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4em;
+}
+
+.home_egressos h2 {
+    font-size: 2.5em;
+    margin-bottom: .5em;
+    padding: 1em;
+}
+
+.paragrafo_left_right{
+    text-align: justify;
+    padding: 1em;
+}
+
+.img_right{
+    float: right;
+    margin-left: 1em;
+    border-radius: 50%;
+}
+
+
+

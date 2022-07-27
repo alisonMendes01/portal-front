@@ -1,0 +1,10 @@
+.paragrafo_left_right{
+    text-align: justify;
+    padding: 1em;
+}
+
+.img_left{
+    float: left;
+    margin-right: 1em;
+    border-radius: 50%;
+}

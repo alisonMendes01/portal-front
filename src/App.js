@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/pages/Home';
+import Depoimentos from './components/pages/Depoimentos';
+import Egressos from './components/pages/Egressos';
+import Estatisticas from './components/pages/Estatisticas';
+// import Login from './components/pages/Login';
+// import Cadastro from './components/pages/Cadastro';
+
+import Container from './components/layout/Container';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+
+      <Container customClass="min-height">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/depoimentos" element={<Depoimentos />} />
+          <Route path="/egressos" element={<Egressos />} />
+          <Route path="/estatisticas" element={<Estatisticas />} />
+          {/*<Route path="/login" element={<Login />} /> */}
+          {/*<Route path="/cadastro" element={<Cadastro />} />*/}
+        </Routes>
+      </Container>
+      
+      <Footer />
+    </Router>
+
   );
 }
 
