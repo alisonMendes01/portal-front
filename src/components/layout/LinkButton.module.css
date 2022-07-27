@@ -1,11 +1,19 @@
 .btn {
-    background-color: #4CAF50;
+    background-color: #8C0333;
+    border-radius:28px;
+    border:1px solid black;
     color: white;
-    padding: 0.5em, 1em;
-    text-decoration: none;
-    transition: 0.5s;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;  
+	text-decoration:none;
+    transition: 0.5s;   
+    padding: 0.9vh 1.5vh;
+    float: right;
+    margin-top: 1em;
+    
 }
 
 .btn:hover {
-    color: yellow;
+    color: #D4B277;
 }

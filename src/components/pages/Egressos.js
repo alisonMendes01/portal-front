@@ -1,8 +1,17 @@
+import EgressoCard from '../layout/EgressoCard'
+import styles from './Egressos.module.css'
+
 function Egressos() {
     return (
-        <div>
+        <section className={styles.home_egressos} >
             <h1>Egressos</h1>
-        </div>
+            <EgressoCard />
+            <EgressoCard />
+            <EgressoCard />
+            <EgressoCard />
+            <EgressoCard />
+            <EgressoCard />
+        </section>
     );
 }
 
