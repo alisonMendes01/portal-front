@@ -1,7 +1,12 @@
+import DepoimentoEgresso from "../layout/DepoimentoEgresso";
+import styles from './Depoimento.module.css';
+
 function Depoimentos() {
+    const nome = "Fulano de tal";
     return (
-        <div>
+        <div className={styles.home_depoimento}>
             <h1>Depoimentos</h1>
+            <DepoimentoEgresso />
         </div>
     );
 }

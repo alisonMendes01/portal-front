@@ -20,3 +20,14 @@
     color: #fff;
     margin: 0.5em;
 }
+.dados{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 7vh;
+    justify-content: center;
+}
+.dados img{
+    width: 10%;
+    margin: 0.5em;
+}
