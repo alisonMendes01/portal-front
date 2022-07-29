@@ -1,0 +1,22 @@
+.container{
+    background-color: #8C0333;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    border-radius: 0em 0em 5em 0em;
+    margin-bottom: 2em;
+}
+
+.container h1{
+    color: #fff;
+    margin: 0.5em;
+}
+.container h3{
+    color: #fff;
+    margin: 0.5em;
+}
+.container p{
+    color: #fff;
+    margin: 0.5em;
+}
