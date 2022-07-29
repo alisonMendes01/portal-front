@@ -16,7 +16,6 @@ function EgressoCard({nome, formacao, ocupacao,anoConclusao, UnidadeAcademica}) 
                         <LinkButton to='/egressodescricao' text='Ver mais'/>
                     </div>
                 </div>
-                
 
     )
 }
