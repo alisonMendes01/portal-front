@@ -13,6 +13,11 @@ function EgressoDescricao() {
                 <h1>Egressos Descrição</h1>
                 <EgressoContato nome={nome} formacao={formacao} ocupacao={ocupacao} anoConclusao= {anoConclusao}
                 UnidadeAcademica={UnidadeAcademica}/>
+                <Depoimento />
+                <Depoimento />
+                <Depoimento />
+                <Depoimento />
+                
         </section>
     );
 }
