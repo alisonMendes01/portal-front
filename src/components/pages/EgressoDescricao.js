@@ -14,7 +14,6 @@ function EgressoDescricao() {
                 <EgressoContato nome={nome} formacao={formacao} ocupacao={ocupacao} anoConclusao= {anoConclusao}
                 UnidadeAcademica={UnidadeAcademica}/>
         </section>
-            
     );
 }
 
