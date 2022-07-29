@@ -16,7 +16,6 @@ function EgressoCard() {
                         <LinkButton to='/egressodescricao' text='Ver mais'/>
                     </div>
                 </div>
-                
 
     )
 }
