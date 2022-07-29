@@ -3,17 +3,18 @@ import styles from './EgressoContato.module.css';
 import foto from '../../img/foto.png';
 import Contato from './Contato';
 
-function EgressoContato() {
+function EgressoContato({nome, formacao, ocupacao,anoConclusao, UnidadeAcademica}) {
     return (
         <div className={styles.container}>
             <img src={foto} alt="" className={styles.img} />
             <div className={styles.dados}>
-                <h2>Fulana de Tal Souza</h2>    
-                <p>Formação: Bacharel em Matemática na UFMA</p>
-                <p>Ocupação: Gerente de Projeto na CCLogística</p>
-                <p>Ano de Conclusão:  2022</p>
-                <p>Unidade Acadêmica: Campos Bacanga</p>
-                <Contato/>
+            <h2>{nome}</h2>    
+                <p>Formação: {formacao}</p>
+                <p>Ocupação: {ocupacao}</p>
+                <p>Ano de Conclusão:  {anoConclusao}</p>
+                <p>Unidade Acadêmica: {UnidadeAcademica}</p>
+                <Contato linkInsta="https://www.instagram.com/" linkFacebook="https://www.instagram.com/"
+                linkLinkedin="https://www.instagram.com/" linkGithub="ttps://www.instagram.com/" />
             </div>
         </div>
     )
