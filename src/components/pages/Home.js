@@ -4,6 +4,7 @@ import EgressoLeft from '../layout/EgressoLeft';
 import EgressoRight from '../layout/EgressoRight';
 
 function Home() {
+    const texto = "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
     return (
         <>
             <section className={styles.home_banner}>
@@ -14,8 +15,8 @@ function Home() {
             <section className={styles.home_egressos}>
                 <h2>Egressos</h2>
 
-                <EgressoLeft />
-                <EgressoRight />
+                <EgressoLeft texto={texto}/>
+                <EgressoRight texto={texto}/>
 
             </section>
         </>
