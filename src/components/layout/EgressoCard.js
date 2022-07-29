@@ -13,7 +13,7 @@ function EgressoCard() {
                         <p>Ocupação: Gerente de Projeto na CCLogística</p>
                         <p>Ano de Conclusão:  2022</p>
                         <p>Unidade Acadêmica: Campos Bacanga</p>
-                        <LinkButton to='' text='Ver mais'/>
+                        <LinkButton to='/egressodescricao' text='Ver mais'/>
                     </div>
                 </div>
                 
