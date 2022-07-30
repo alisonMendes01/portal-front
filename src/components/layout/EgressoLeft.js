@@ -2,19 +2,12 @@ import styles from './EgressoLeft.module.css';
 
 import foto from '../../img/foto.png';
 
-import LinkButton from '../layout/LinkButton';
-
-function EgressoLeft() {
+function EgressoLeft({texto}) {
     return (
-        <div className={styles.paragrafo_left_right}>
-            <div className={styles.container}>
-                <img src={foto} alt="" />
-                <h2>Fulana de Tal Souza</h2>
-                <p>Ciência da Computação</p>
-            </div>
-            <br />
-            <LinkButton to='/egressodescricao' text='Ver mais' />
-        </div>
+        <p className={styles.paragrafo_left_right}>
+            <img src={foto} alt="" className={styles.img_left} />
+            <p>{texto}</p>
+        </p>
     )
 }
 

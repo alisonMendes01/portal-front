@@ -3,7 +3,7 @@ import Home from './components/pages/Home';
 import Depoimentos from './components/pages/Depoimentos';
 import Egressos from './components/pages/Egressos';
 import Estatisticas from './components/pages/Estatisticas';
-// import Login from './components/pages/Login';
+import Login from './components/pages/Login';
 // import Cadastro from './components/pages/Cadastro';
 
 import Container from './components/layout/Container';
@@ -23,7 +23,7 @@ function App() {
           <Route path="/egressos" element={<Egressos />} />
           <Route path="/estatisticas" element={<Estatisticas />} />
           <Route path="/egressodescricao" element={<EgressosDescricao />} />
-          {/*<Route path="/login" element={<Login />} /> */}
+          <Route path="/login" element={<Login />} /> 
           {/*<Route path="/cadastro" element={<Cadastro />} />*/}
         </Routes>
       </Container>

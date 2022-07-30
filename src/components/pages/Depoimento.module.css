@@ -1,11 +1,7 @@
-.home_descricao{
+.home_depoimento{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 4em;
-}
-
-.home_egressos h1{
-    font-size: 2.5em;
 }
