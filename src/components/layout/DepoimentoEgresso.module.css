@@ -21,13 +21,17 @@
     margin: 0.5em;
 }
 .dados{
-    width: 100%;
+    width: 60%;
     display: flex;
     flex-direction: row;
-    padding-bottom: 7vh;
-    justify-content: center;
+    justify-content: left;
+    align-items: center;
 }
 .dados img{
     width: 10%;
+    margin: 0.5em;
+}
+.dados h3{
+    color: #fff;
     margin: 0.5em;
 }

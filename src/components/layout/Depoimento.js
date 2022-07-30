@@ -1,5 +1,4 @@
 import styles from './Depoimento.module.css';
-import foto from '../../img/foto.png';
 
 function Depoimento() {
     return (
