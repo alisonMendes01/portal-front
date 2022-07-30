@@ -10,7 +10,7 @@ function Login() {
                         <div className={style.underline}></div>
                     </div>
                     <div  className={style.inputField}>
-                        <input type="text" name="password" id="password" placeholder="senha"/>
+                        <input type="password" name="password" id="password" placeholder="senha"/>
                         <div className={style.underline}></div>
                     </div>
                     <input type="submit" name="action" value="login" />
