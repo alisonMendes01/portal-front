@@ -1,10 +1,17 @@
-.paragrafo_left_right{
-    text-align: justify;
-    padding: 1em;
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.img_left{
-    float: left;
-    margin-right: 1em;
+.paragrafo_left_right {
+    text-align: justify;
+    padding: 1em;
+    border: 1px solid #aaa;
+    margin: .5em 2em;
+}
+
+.img_left {
+    margin: auto;
     border-radius: 50%;
 }
