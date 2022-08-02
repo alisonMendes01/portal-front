@@ -2,6 +2,7 @@ import style from './Login.module.css';
 
 function Login() {
     return (
+        <div className={style.login}>
             <main className={style.container}>
                 <h2>Login</h2>
                 <form method="post" action="">
@@ -16,6 +17,7 @@ function Login() {
                     <input type="submit" name="action" value="login" />
                 </form>
             </main>
+        </div>
     );
 }
 
