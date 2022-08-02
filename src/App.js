@@ -10,6 +10,9 @@ import Container from './components/layout/Container';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import EgressosDescricao from './components/pages/EgressoDescricao';
+import Cursos from './components/layout/admin/Cursos';
+import FaixaSalarial
+from './components/layout/admin/FaixaSalarial';
 
 function App() {
   return (
@@ -24,6 +27,8 @@ function App() {
           <Route path="/estatisticas" element={<Estatisticas />} />
           <Route path="/egressodescricao" element={<EgressosDescricao />} />
           <Route path="/login" element={<Login />} /> 
+          <Route path="/cursos" element={<Cursos />} />
+          <Route path="/faixasalarial" element={<FaixaSalarial />} />
           {/*<Route path="/cadastro" element={<Cadastro />} />*/}
         </Routes>
       </Container>
