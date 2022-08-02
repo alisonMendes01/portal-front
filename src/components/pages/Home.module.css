@@ -25,6 +25,7 @@
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+
 /* Topicos da home*/
 .topico {
     font-size: 2.5em;
@@ -38,23 +39,44 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
-    padding: 0 4em;
     border-top: 1px solid #ccc;
+    margin-bottom: .5em;
 }
 
 .home_egressos_cards{
     width: 100%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
-    padding: 0 2em 2em;
+    justify-content: space-between;
 }
 
 /*Depoimentos*/
 .home_depoimentos{
     width: 100%;
-    padding: 0 4em;
+    display: flex;
+    flex-direction: column;
     border-top: 1px solid #ccc;
+    margin-bottom: 0.5em;
+}
+
+
+.home_depoimentos_todos{
+    text-align: center;
+    text-decoration: none;
+    background-color: #8C0333;
+    color: #fff;
+    padding: .5em;   
+    margin-bottom: .5em;
+    transition: 0.5s;
+}
+
+.home_depoimentos_todos:hover{
+    color: #D4B277;
+}
+.home_depoimentos_cards{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }

@@ -1,0 +1,36 @@
+.container {
+    width: 50vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    border: 1px solid #aaa;
+    background-color: #D4B277;
+}
+
+.container a{
+    text-decoration: none;
+}
+
+.autor {
+    font-size: 1.5em;
+    margin-bottom: .5em;
+    color: white;
+    padding: .5em;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+.texto {
+    text-align: center;
+    padding: .5em;
+}
+
+.data {
+    text-align: right;
+    padding: .2em;
+}

@@ -9,7 +9,7 @@ function DepoimentoEgresso({nome, titulo, texto, data}) {
             <div>
                 <a className={styles.dados} href='/egressodescricao'>
                     <img src={foto} alt="" className={styles.img} />
-                    <h3>Kennedy</h3>
+                    <h3>{nome}</h3>
                 </a>
             </div>
 
