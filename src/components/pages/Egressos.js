@@ -1,36 +1,43 @@
 import EgressoCard from '../layout/EgressoCard'
 import styles from './Egressos.module.css'
 
-function Egressos() {
-    return (
-        <section className={styles.home_egressos} >
-            <h1>Egressos</h1>
+import React from 'react'
+import EgressoService from '../services/EgressoService'
 
-            <EgressoCard nome="Fulano de tal"
-                         formacao="FormacaoTeste"
-                         ocupacao= "Ocupação Teste"
-                         anoConclusao="2022"
-                         UnidadeAcademica="Bacanga" />
-            
-            <EgressoCard nome="Fulano de tal"
-                         formacao="FormacaoTeste"
-                         ocupacao= "Ocupação Teste"
-                         anoConclusao="2022"
-                         UnidadeAcademica="Bacanga" />
-            
-            <EgressoCard nome="Fulano de tal"
-                         formacao="FormacaoTeste"
-                         ocupacao= "Ocupação Teste"
-                         anoConclusao="2022"
-                         UnidadeAcademica="Bacanga" />
+class Egressos extends React.Component {
+    state = {
+        egressos: []
+    }
 
-            <EgressoCard nome="Fulano de tal"
-                         formacao="FormacaoTeste"
-                         ocupacao= "Ocupação Teste"
-                         anoConclusao="2022"
-                         UnidadeAcademica="Bacanga" />
-        </section>
-    );
+    constructor() {
+        super()
+        this.service = new EgressoService();
+    }
+
+    componentDidMount() {
+        this.service.buscarTodos()
+            .then(response => {
+                console.log(response.data)
+                this.setState({ egressos: response.data })
+            }).catch(erro => {
+                console.log(erro.response)
+            })
+    }
+
+
+
+    render() {
+        return (
+            <section className={styles.home_egressos} >
+                <h1>Egressos</h1>
+
+                {this.state.egressos.map(egresso => (
+                    <EgressoCard key={egresso.id} nome={egresso.nome} email={egresso.email} profEgresso={egresso.profEgresso} resumo={egresso.resumo} cpf={egresso.cpf} />
+                ))}
+
+            </section>
+        )
+    }
 }
 
 export default Egressos;
