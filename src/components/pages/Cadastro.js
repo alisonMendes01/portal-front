@@ -1,6 +1,8 @@
+import style from './Cadastro.module.css';
+
 function Cadastro() {
     return (
-        <div>
+        <div className={style.container}>
             <h1>Cadastro</h1>
         </div>
     );
