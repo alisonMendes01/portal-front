@@ -4,6 +4,7 @@ import Depoimentos from './components/pages/Depoimentos';
 import Egressos from './components/pages/Egressos';
 import Estatisticas from './components/pages/Estatisticas';
 import Login from './components/pages/Login';
+import Cadastrar from './components/pages/Cadastrar';
 // import Cadastro from './components/pages/Cadastro';
 
 import Container from './components/layout/Container';
@@ -29,6 +30,8 @@ function App() {
           <Route path="/login" element={<Login />} /> 
           <Route path="/cursos" element={<Cursos />} />
           <Route path="/faixasalarial" element={<FaixaSalarial />} />
+          <Route path="/cadastrar" element={<Cadastrar />} />
+          {/*<Route path="/admin" element={<Admin />} />*/}
           {/*<Route path="/cadastro" element={<Cadastro />} />*/}
         </Routes>
       </Container>

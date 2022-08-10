@@ -5,7 +5,7 @@
     justify-content: center;
 }
 
-main.container{
+.container{
     background: white;
     padding: 2rem;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
@@ -13,14 +13,14 @@ main.container{
     align-items: center;
 }
 
-main h2{
+.container h2{
     font-weight: 600;
     margin-bottom: 2rem;
     position: relative;
     text-align: center;
 }
 
-main h2::before{
+.container h2::before{
     content: '';
     position: absolute;
     height: 4px;
@@ -82,7 +82,9 @@ form .inputField:first-child{
     color: rgba(0, 0, 0, 0.5);
 }
 
-form input[type="submit"] {
+form input[name="login"] {
+    margin-top: 1em;
+    padding: 0.3em;
     background: #8C0333;
     cursor: pointer;
     color: white;
@@ -91,7 +93,7 @@ form input[type="submit"] {
     transition: all 0.3s ease;
 }
 
-form input[type="submit"]:hover{
+form input[name="login"]:hover{
     letter-spacing: 0.5px;
     background: #7a052e;
 

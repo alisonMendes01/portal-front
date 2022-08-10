@@ -8,37 +8,20 @@ import EgressoService from "../services/EgressoService";
 
 function filtra_depoimentos(event){
     event.preventDefault();
-    this.setState({depoimentos: []})
-    this.serviceEgresso.buscarporNome(this.state.NomeEgresso.replace(' ', '+'))
-        .then(response => {
-            this.setState({ egressos: response.data })
+    this.setState({depoimentos: []});
+    this.service.buscarPorNome(this.state.nome)
+        .then( response => {
+            this.setState({depoimentos: response.data})
         }).catch(erro => {
             console.log(erro.response)
-        }).finally(() => {
-            this.setState({ nome: "" })
-        }
-    )
-
-    //Não ta retornando o nome e o id dentro do depoimento
-    this.state.egressos.map(egresso => (
-      this.service.buscarPorId(egresso.id)
-        .then(response => {
-            this.setState({depoimentos: response.data})
-        })
-    ))
-    
-    console.log(this.state.depoimentos)
-
-
+        });
 }
 
 
 class Depoimentos extends React.Component {
     state = {
         depoimentos: [],
-        idEgresso: 0,
-        NomeEgresso: '',
-        egressos: []
+        nome: ""
     }
 
     constructor() {
@@ -65,14 +48,18 @@ class Depoimentos extends React.Component {
                 <form onSubmit={filtra_depoimentos.bind(this)}>
                     <p>Pesquisar:</p>
                     <input type="text" id="name" name="nameDepoimento"
-                        onChange={event => this.setState({NomeEgresso: event.target.value })}
+                        onChange={event => this.setState({ nome: event.target.value })} 
                     />
                     <input type="submit" name="buscarDepoimento" value="buscar" />
                 </form>
-                
-                {this.state.depoimentos.map(depoimento => (
+                {console.log(this.state.depoimentos)}
+
+                {this.state.depoimentos.length > 1 ?
+                this.state.depoimentos.map(depoimento => (
                     <DepoimentoEgresso key={depoimento.id} nome={depoimento.egressoNome} texto={depoimento.texto} data={depoimento.data[2] + "/" +depoimento.data[1] + "/" + depoimento.data[0] } id_egresso={depoimento.idEgresso} />
-                ))}             
+                )) : 
+                    <p>Sem resultados!</p>
+                }             
 
             </div>
         );

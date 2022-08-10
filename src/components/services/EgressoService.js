@@ -15,5 +15,9 @@ class EgressoService extends ApiService {
     buscarporNome(nome){
         return this.get(`/buscar-nome/${nome}`)
     }
+
+    salvar(egresso) {
+        return this.post("/salvar", egresso);
+    }
 }
 export default EgressoService

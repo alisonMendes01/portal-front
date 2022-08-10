@@ -20,8 +20,8 @@ function Navbar() {
                     <li className={styles.item}><Link to="/estatisticas">Estatisticas</Link></li>
                     <li className={styles.item}><Link to="/egressos">Egressos</Link></li> 
                     <li className={styles.item}><Link to="/login">Login</Link></li>
-                    {/*<li className={styles.item} >|</li>  
-                    <li className={styles.item}><Link to="/cadastro">Cadastro</Link></li>*/}
+                    <li className={styles.item} >|</li>  
+                    <li className={styles.item}><Link to="/cadastrar">Cadastro</Link></li>
                 </ul>
             </Container>
         </nav>

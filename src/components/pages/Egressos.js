@@ -59,7 +59,7 @@ class Egressos extends React.Component {
                     />
                     <input type="submit" name="buscarKennedy" value="buscar" />
                 </form>
-                {this.state.egressos.length > 1 ? (
+                {this.state.egressos.length > 0 ? (
                     this.state.egressos.map(egresso => (
                         <EgressoCard key={egresso.id} id_egresso={egresso.id} nome={egresso.nome} email={egresso.email} cpf={egresso.cpf} resumo={egresso.resumo} cargo={egresso.cargo} />
                     ))

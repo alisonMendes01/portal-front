@@ -15,6 +15,10 @@ class DepoimentoService extends ApiService {
     buscar6primeiros() {
         return this.get(`/buscar-6-primeiros`)
     }
+
+    buscarPorNome(nome){
+        return this.get(`/buscar-por-nome/${nome}`)
+    }
 }
 
 export default DepoimentoService

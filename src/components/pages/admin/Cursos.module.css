@@ -31,30 +31,31 @@
 
 
 /*Form*/
-form {
+form{
     display: flex;
     flex-direction: column;
+    border-radius: 4px;
+    background: #fff;
 }
 
-.inputField {
-    align-items: center;
-    width: 100%;
-    font-weight: bolder;
-
+.inputField{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
 }
+.inputField label{
+    font-weight: bold;
+    font-size: 14px;
+}
+
 .inputField input{
-    width: 60%;
-
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 15px;
 }
 
-form .inputField:first-child {
-    margin-bottom: 1.5rem;
-    align-items: center;
-    width: 100%;
-}
-
-form input[name="action"] {
-    margin-top: 2rem;
+form input[name="cadastrarcurso"] {
     padding: 0.4rem;
     background: #8C0333;
     cursor: pointer;
@@ -64,7 +65,7 @@ form input[name="action"] {
     transition: all 0.3s ease;
 }
 
-form input[name="action"]:hover {
+form input[name="cadastrarcurso"]:hover {
     letter-spacing: 0.5px;
     background: #7a052e;
 

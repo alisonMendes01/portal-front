@@ -50,7 +50,7 @@ class FaixaSalarial extends React.Component {
                                         />
                                         <div className={styles.underline}></div>
                                     </div>
-                                    <input type="submit" name="action" value="cadastrar" />
+                                    <input type="submit" name="cadastrarfaixasalarial" value="cadastrar" />
                                 </form>
                             </div>
                         </div>
