@@ -1,11 +1,29 @@
-.home_descricao{
-    width: 100%;
+.descricao{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4em;
+    width: 100%;
 }
 
-.home_egressos h1{
-    font-size: 2.5em;
+.egresso {
+    width: 100%;
+}
+
+.egresso h1{
+    text-align: center;
+    font-size: 2em;
+    margin: 1em;
+}
+
+.depoimento{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.depoimento h1{
+    text-align: center;
+    font-size: 2em;
+    margin: 1em;
 }

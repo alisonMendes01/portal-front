@@ -13,7 +13,7 @@
     border: 1px solid black;
     transition: 0.5s;  
     padding: 40px 20px;
-    border-radius: 100%;
+    border-radius: 50%;
     background-color: #8C0333;
     color: #fff;
 }

@@ -10,9 +10,9 @@ import Container from './components/layout/Container';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import EgressosDescricao from './components/pages/EgressoDescricao';
-import Cursos from './components/layout/admin/Cursos';
+import Cursos from './components/pages/admin/Cursos';
 import FaixaSalarial
-from './components/layout/admin/FaixaSalarial';
+from './components/pages/admin/FaixaSalarial';
 
 function App() {
   return (

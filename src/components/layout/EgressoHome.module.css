@@ -19,4 +19,19 @@
 .img_left {
     margin: auto;
     border-radius: 50%;
+
+}
+
+.container h3{
+    width: 25vh;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+    margin:0;
+    resize: horizontal;
+}
+
+.container img{
+    padding-bottom: 10px;
 }

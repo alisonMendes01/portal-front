@@ -1,4 +1,4 @@
-.home_egressos{
+.home_depoimento{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -6,7 +6,9 @@
     padding: 4em;
 }
 
-.home_egressos h1{
+.home_depoimento h1{
+
+    margin-bottom: 0.5em;
     font-size: 2.5em;
 }
 
@@ -16,6 +18,7 @@ form{
     justify-content: center;
     align-items: center;
     margin-top: 1em;
+    margin-bottom: 2em;
 }
 
 form p{
@@ -23,12 +26,12 @@ form p{
     text-align: center;
     font-weight: bolder;
 }
-form input[name="nameKennedy"] {
+form input[name="nameDepoimento"] {
     width: 30%;
     height: 20px;
 }
 
-form input[name="buscarKennedy"] {
+form input[name="buscarDepoimento"] {
     margin-top: 0.5em;
     padding: 0.4em;
     background: #8C0333;
@@ -41,7 +44,7 @@ form input[name="buscarKennedy"] {
     height: 35px;
 }
 
-form input[name="buscarKennedy"]:hover {
+form input[name="buscarDepoimento"]:hover {
     letter-spacing: 0.5px;
     background: #7a052e;
 

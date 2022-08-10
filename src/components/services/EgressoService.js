@@ -9,5 +9,11 @@ class EgressoService extends ApiService {
     buscarTodos() {
         return this.get(`/buscar-todos`)
     }
+    buscar4primeiros() {
+        return this.get(`/buscar-4-primeiros`)
+    }
+    buscarporNome(nome){
+        return this.get(`/buscar-nome/${nome}`)
+    }
 }
 export default EgressoService

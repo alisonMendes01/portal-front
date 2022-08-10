@@ -1,28 +1,60 @@
-import Depoimento from "../layout/Depoimento";
-import EgressoContato from "../layout/EgressoContato";
-import styles from './EgressoDescricao.module.css';
+import styles from './EgressoDescricao.module.css'
 
-function EgressoDescricao() {
-    const nome = "Fulano de tal";
-    const formacao = "FormacaoTeste";
-    const ocupacao = "Ocupação Teste";
-    const anoConclusao = "2022";
-    const UnidadeAcademica = "Bacanga";
-    const DepoTitulo = "Depoimento Teste";
-    const DepoTexto = "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-    const DepoData = "2022";
+import React from 'react'
+import EgressoService from '../services/EgressoService'
+import DepoimentoService from '../services/DepoimentoService'
+import EgressoContato from '../layout/EgressoContato'
+import Depoimento from '../layout/Depoimento'
 
-    return (
-        <section className={styles.home_descricao} >
-                <h1>Egressos Descrição</h1>
-                <EgressoContato nome={nome} formacao={formacao} ocupacao={ocupacao} anoConclusao= {anoConclusao}
-                UnidadeAcademica={UnidadeAcademica}/>
-                <Depoimento Titulo={DepoTitulo} Texto={DepoTexto} Data={DepoData} />
-                <Depoimento Titulo={DepoTitulo} Texto={DepoTexto} Data={DepoData} />
-                <Depoimento Titulo={DepoTitulo} Texto={DepoTexto} Data={DepoData} />
-                <Depoimento Titulo={DepoTitulo} Texto={DepoTexto} Data={DepoData} />
-        </section>
-    );
+class Egressos extends React.Component {
+    state = {
+        egresso: [],
+        depoimento: []
+    }
+
+    constructor() {
+        super()
+        this.service = new EgressoService();
+        this.service_depoimento = new DepoimentoService();
+        const queryParams = new URLSearchParams(window.location.search);
+        this.id = queryParams.get("id");
+    }
+
+    componentDidMount() {
+        this.service.buscar(this.id)
+            .then(response => {
+                console.log(response.data)
+                this.setState({ egresso: response.data })
+            }).catch(erro => {
+                console.log(erro.response)
+            })
+        this.service_depoimento.buscarPorId(this.id)
+            .then(response => {
+                console.log(response.data)
+                this.setState({ depoimento: response.data })
+            }).catch(erro => {
+                console.log(erro.response)
+            })
+    }
+
+    render() {
+        return (
+            <div className={styles.descricao}>
+                <section  className={styles.egresso}>
+                    <h1>Egressos Descrição</h1>
+                    {this.state.egresso.map(egresso => (
+                        <EgressoContato key={egresso.id} nome={egresso.nome} email={egresso.email} cargo={egresso.cargo} resumo={egresso.descricao} />
+                    ))}
+                </section>
+                <section className={styles.depoimento}>
+                    <h1>Depoimento</h1>
+                    {this.state.depoimento.map(depoimento => (
+                        <Depoimento key={depoimento.id} nome={depoimento.egressoNome} texto={depoimento.texto} data={depoimento.data[2] + "/" +depoimento.data[1] + "/" + depoimento.data[0] } />
+                    ))}
+                </section>
+            </div>
+        )
+    }
 }
 
-export default EgressoDescricao;
+export default Egressos;

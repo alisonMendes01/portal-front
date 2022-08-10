@@ -83,8 +83,6 @@ form .inputField:first-child{
 }
 
 form input[type="submit"] {
-    margin-top: 2rem;
-    padding: 0.4rem;
     background: #8C0333;
     cursor: pointer;
     color: white;
